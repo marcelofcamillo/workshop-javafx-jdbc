@@ -3,19 +3,22 @@ package model.entities;
 import java.io.Serializable;
 
 public class Department implements Serializable {
-	private static final long serialVersionUID = 1L;
-
+	// para os objetos poderem ser transformados em sequências de bytes
+	private static final long serialVersionUID = 1L;	
+	
 	private Integer id;
 	private String name;
-
+	
 	public Department() {
+		
 	}
-
+	
 	public Department(Integer id, String name) {
 		this.id = id;
 		this.name = name;
 	}
 
+	// getters e setters
 	public Integer getId() {
 		return id;
 	}
@@ -40,6 +43,7 @@ public class Department implements Serializable {
 		return result;
 	}
 
+	// para que os objetos possam ser comparados pelo conteúdo e não pela referência de ponteiros
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -57,6 +61,7 @@ public class Department implements Serializable {
 		return true;
 	}
 
+	// toString
 	@Override
 	public String toString() {
 		return "Department [id=" + id + ", name=" + name + "]";
